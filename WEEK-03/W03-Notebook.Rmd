@@ -1,6 +1,7 @@
 ---
 title: "R Notebook sandbox"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -10,11 +11,14 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
 ```{r}
+library(devtools);
+my.source = 'local;
+local.path = "C:/Program Files/Git/WSU_STATS419_FALL2020/";
+source( paste0(local.path,"functions/libraries.R"), local=T );
+source( paste0(local.path,"functions/functions-imdb.R"), local=T );
 
 
 
-source("functions/libraries.R");
-source("functions/functions-imdb.R");
 
 
 ```
