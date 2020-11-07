@@ -1,0 +1,13 @@
+﻿My Git Bash Instructions
+
+1. Run Git Bash
+2. cd /c/"program files"/git/WSU_STATS419_FALL2020
+3. $ ssh -T git@github.com (response: Hi  etc, successfully authenticated, but doesn't provide access to shell", (this is ok))
+4. $ ls -al (file listing)
+5. $ git status
+6. $ git add .
+7. $ git status (checks changes)
+8. $ git commit (saves changes locally)
+9. $ git remote -v (checks set remote url)
+10. $ git commit -m "personality dataset"
+8. $ git push -u origin master

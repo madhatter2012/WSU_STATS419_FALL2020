@@ -332,6 +332,12 @@ source_url( paste0(path.humanVerseWSU,"master/misc/functions-project-measure.R")
 Below is the code to load the data and prepare it for analysis.
 
 ```{r,appendix-secret,message=FALSE}
+
+
+
+
+
+
 # START HERE!!!
 
 
@@ -351,8 +357,36 @@ measure = utils::read.csv( paste0(path.to.secret, "measure-students.txt"), heade
 #path.github = "https://raw.githubusercontent.com/this-IS-YOUR-PATH-TO-GITHUB/";
 #source_url( paste0(path.github,"master/functions/functions-project-measure.R") );
 
-#path.github = "https://raw.githubusercontent.com/madhatter2012/WSU_STATS419_FALL2020/";
-#source_url( paste0(path.github,"master/functions/functions-my-project-measure.R"));
+path.github = "https://raw.githubusercontent.com/madhatter2012/WSU_STATS419_FALL2020/";
+source_url( paste0(path.github,"master/functions/functions-my-project-measure.R") );
+
+
+# From Descriptive Stats....
+
+library(devtools);
+path.github = "https://raw.githubusercontent.com/MonteShaffer/humanVerseWSU/master/";
+source_url ( paste0( path.github, "humanVerseWSU/R/functions-file.R" ) );
+
+# C:\Users\Alexander Nevsky\Dropbox\WSU-419\Fall 2020\__student_access__\_SECRET_\
+
+path.to.secret = "C:/Program Files/Git/_SECRET_/";
+# paste your file-path above (on Windows)
+# highlight, and copy, then run the next line of code in a console.
+# path.to.secret = convertDirectoryWin.toR();
+
+# https://stackoverflow.com/questions/64476043/
+# https://stackoverflow.com/questions/1189759/
+
+path.to.secret = "C:/Users/Alexander Nevsky/Dropbox/WSU-419/Fall 2020/__student_access__/_SECRET_/";
+
+measure = utils::read.csv( paste0(path.to.secret, "measure-students.txt"), header=TRUE, quote="", sep="|");
+
+measure;
+
+set.seed(12222015);
+measure.example = measure[ sample(1:nrow(measure), 22), ];
+
+measure.example;
 
 # this is your function
 # put in the same "units"
